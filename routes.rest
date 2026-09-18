@@ -1,0 +1,56 @@
+// LOCALHOST
+
+### Create a manufacturer
+POST http://localhost:3000/manufacturers HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Toyota",
+  "country": "Japan",
+  "foundedYear": 1937,
+  "website": "https://toyota.com"
+}
+
+### Get all manufacturers
+GET http://localhost:3000/manufacturers
+
+### Create a car
+POST http://localhost:3000/cars HTTP/1.1
+Content-Type: application/json
+
+{
+  "manufacturer": "6aad6dde3a4c473f6c100a6a",
+  "model": "Corolla",
+  "year": 2023,
+  "engineType": "Inline-4",
+  "transmission": "Automatic",
+  "color": "White",
+  "price": 25000,
+  "mileage": 0,
+  "fuelType": "Gasoline"
+}
+
+### Get all cars
+GET http://localhost:3000/cars
+
+### Get single car 
+GET http://localhost:3000/cars/6aad6e873a4c473f6c100a6b
+
+### Update car 
+PUT http://localhost:3000/cars/6aad6dde3a4c473f6c100a6a HTTP/1.1
+Content-Type: application/json
+
+{
+  "manufacturer": "6aad6dde3a4c473f6c100a6a",
+  "model": "Corolla",
+  "year": 2024,
+  "engineType": "Inline-4",
+  "transmission": "Automatic",
+  "color": "Blue",
+  "price": 26000,
+  "mileage": 0,
+  "fuelType": "Gasoline"
+}
+
+### Delete car 
+DELETE http://localhost:3000/cars/6aad6dde3a4c473f6c100a6a

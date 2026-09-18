@@ -1,0 +1,32 @@
+{
+  "name": "cse341-project2-cars",
+  "version": "1.0.0",
+  "description": "This project is a RESTful API built for CSE 341 – Project 2, focusing on performing full CRUD operations on a MongoDB database as required for Week 03–04 of the course",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "postinstall": "node swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniel257P/cse341-project2-cars.git"
+  },
+  "keywords": [],
+  "author": "Daniel Paulino",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Daniel257P/cse341-project2-cars/issues"
+  },
+  "homepage": "https://github.com/Daniel257P/cse341-project2-cars#readme",
+  "dependencies": {
+    "body-parser": "^2.3.0",
+    "dotenv": "^18.0.0",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.1",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1",
+    "validatorjs": "^3.22.1"
+  }
+}
