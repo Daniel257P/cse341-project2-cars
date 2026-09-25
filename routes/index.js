@@ -2,12 +2,12 @@ const router = require('express').Router();
 const passport = require('passport');
 
 router.get('/login', (req, res) => {
-    //#swagger.tags=['Authentication']
+    //#swagger.ignore = true
   passport.authenticate('github')(req, res);
 });
 
 router.get('/logout', (req, res, next) => {
-     //#swagger.tags=['Authentication']
+     //#swagger.ignore = true
   req.logout((err) => {          
     if (err) return next(err);
     req.session.destroy(() => res.redirect('/'));

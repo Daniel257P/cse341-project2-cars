@@ -41,7 +41,7 @@ passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((user, done) => done(null, user));
 
 app.get('/', (req, res) => {
-  //#swagger.tags=['Authentication']
+  //#swagger.ignore = true
   res.send(
     req.session.user ? `Logged in as ${req.session.user.displayName || req.session.user.username}` : 'Logged out'
   );
