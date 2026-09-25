@@ -41,6 +41,7 @@ passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((user, done) => done(null, user));
 
 app.get('/', (req, res) => {
+  //#swagger.tags=['Authentication']
   res.send(
     req.session.user ? `Logged in as ${req.session.user.displayName || req.session.user.username}` : 'Logged out'
   );
@@ -50,6 +51,7 @@ app.get(
   '/github/callback',
   passport.authenticate('github', { failureRedirect: '/api-docs', session: false }),
   (req, res) => {
+    //#swagger.ignore = true
     req.session.user = req.user;
     res.redirect('/');
   }
