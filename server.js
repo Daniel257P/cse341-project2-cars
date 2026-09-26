@@ -65,17 +65,6 @@ app.use((err, req, res, next) => {
 
 const port = process.env.PORT || 3000;
 
-
-// const port = process.env.PORT || 3000;
-// app.use(bodyParser.json());
-// app.use('/', require('./routes'));
-
-// app.use((err, req, res, next) => {
-//   console.error(err.stack);
-//   res.status(500).json({ message: 'An unexpected error occurred.', error: err.message });
-// });
-
-
 mongodb.initDb((err) => {
   if (err) {
     console.log(err);
