@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const passport = require('passport');
 
-router.get('/login', (req, res) => {
+router.get('/login', (req, res, next) => {
     //#swagger.ignore = true
-  passport.authenticate('github')(req, res);
+  passport.authenticate('github')(req, res, next);
 });
 
 router.get('/logout', (req, res, next) => {
